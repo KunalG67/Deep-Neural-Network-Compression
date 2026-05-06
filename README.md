@@ -29,6 +29,8 @@ These are fused through a dual-branch CNN + MLP architecture and then compressed
 ---
 
 ## 📁 Project Structure
+
+```
 DNN_Compression/
 ├── compression/
 │   ├── conv2d.py          # Compression-aware Conv2d with pruning mask
@@ -44,6 +46,7 @@ DNN_Compression/
 │   ├── test_eval.py       # Evaluation and per-class accuracy
 │   └── loading.py         # save/load model as sparse .npz
 └── main.py                # End-to-end pipeline driver
+```
 
 ---
 

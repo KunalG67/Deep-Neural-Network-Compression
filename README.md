@@ -50,7 +50,7 @@ DNN_Compression/
 
 ---
 
-## 🧠 Model Architecture — SmallCIFARNet
+## Model Architecture — SmallCIFARNet
 
 ### 1. Dual CNN Branches
 Two independent CNN branches (one for LBP, one for Canny), each processing a `1×100×100` input:
@@ -93,7 +93,7 @@ Binary edge map using thresholds `[100, 200]`, capturing fruit silhouettes and b
 
 ---
 
-## 🗜️ Deep Compression Pipeline
+##  Deep Compression Pipeline
 Baseline Training → Pruning → Retrain → Quantization → Retrain → Huffman Coding → Deploy
 10 epochs       τ=0.05    5 epochs    k=16           5 epochs    1.03 bits/w    0.33 MB
 
@@ -165,7 +165,7 @@ Min-heap Huffman tree built per layer. With 99.7% sparsity, zero-centroid domina
 
 ---
 
-## ⚙️ Compression-Aware Layer Design
+##  Compression-Aware Layer Design
 
 `modified_conv2d` and `modified_linear` subclass PyTorch's standard layers and add:
 
@@ -175,7 +175,7 @@ Min-heap Huffman tree built per layer. With 99.7% sparsity, zero-centroid domina
 
 ---
 
-## 🛠️ Setup & Usage
+##  Setup & Usage
 
 ### Requirements
 ```bash
@@ -192,7 +192,7 @@ python main.py
 
 ---
 
-## 💻 Hardware
+##  Hardware
 
 | Component | Spec |
 |-----------|------|
@@ -205,6 +205,6 @@ python main.py
 
 ---
 
-## 📚 Reference
+##  Reference
 
 Han, S., Mao, H., & Dally, W. J. (2015). [Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding](https://arxiv.org/abs/1510.00149). *ICLR 2016*.
